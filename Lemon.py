@@ -1,6 +1,8 @@
 import string
 import numpy as np
-import time
+
+# Importar bibliotecas para salvar e carregar dados em formato JSON
+import json
 
 # Função para carregar os dados de treinamento de um arquivo
 def carregar_dados_arquivo(nome_arquivo, separador=';'):
@@ -17,6 +19,12 @@ def carregar_dados_arquivo(nome_arquivo, separador=';'):
                 respostas.append(resposta)
     return perguntas, respostas
 
+# Função para salvar as perguntas e respostas em formato JSON
+def salvar_dados_arquivo(nome_arquivo, perguntas, respostas):
+    with open(nome_arquivo, 'w') as arquivo:
+        for pergunta, resposta in zip(perguntas, respostas):
+            linha = f"{pergunta};{resposta}\n"
+            arquivo.write(linha)
 
 # Pré-processamento dos dados
 def preprocessamento(texto):
@@ -28,10 +36,10 @@ def preprocessamento(texto):
 def similaridade_cosseno(str1, str2):
     palavras_str1 = set(str1.split())
     palavras_str2 = set(str2.split())
-    
+
     intersecao = palavras_str1.intersection(palavras_str2)
     similaridade = len(intersecao) / (np.sqrt(len(palavras_str1)) * np.sqrt(len(palavras_str2)))
-    
+
     return similaridade
 
 # Função para encontrar a pergunta mais similar
@@ -64,11 +72,20 @@ perguntas_preproc = [preprocessamento(pergunta) for pergunta in perguntas]
 # Loop infinito para responder a perguntas
 while True:
     user_input = input(f'{usuario}: ')
-    
+
     if user_input.lower() in comando_chave1:
         break
-    
+
     pergunta_similar_idx = encontrar_pergunta_similar(user_input, perguntas_preproc)
     resposta_bot = respostas[pergunta_similar_idx]
     
-    print('Lemon: ', resposta_bot)
+    if similaridade_cosseno(preprocessamento(user_input), preprocessamento(resposta_bot)) < 0.4:
+        print('Lemon: Desculpe, eu não sei a resposta para essa pergunta. Você poderia me ensinar?')
+        nova_resposta = input('Sua resposta: ')
+        perguntas.append(user_input)
+        respostas.append(nova_resposta)
+        perguntas_preproc.append(preprocessamento(user_input))
+        salvar_dados_arquivo('memorias.txt', perguntas, respostas)
+        print('Lemon: Aprendi uma nova resposta! Obrigado por me ensinar.')
+    else:
+        print('Lemon:', resposta_bot)
