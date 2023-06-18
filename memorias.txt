@@ -99,7 +99,7 @@ Quanto é 97 + 97?;97 + 97 é igual a 194!
 Quanto é 98 + 98?;98 + 98 é igual a 196!
 Quanto é 99 + 99?;99 + 99 é igual a 198!
 Quanto é 100 + 100?;100 + 100 é igual a 200!
-Qual é o seu nome?;Meu nome é Lemon
+Qual é o seu nome?;Meu nome é LemonChan
 Qual é a cor do céu?;A cor do céu é azul
 O que é inteligência artificial?;A IA é um campo da ciência da computação que se concentra no desenvolvimento de sistemas e máquinas capazes de realizar tarefas que normalmente requerem inteligência humana.
 Quais são os principais tipos de IA?;Existem diferentes tipos de IA, incluindo IA baseada em regras, aprendizado de máquina, redes neurais e IA simbólica. Cada um desses tipos tem suas próprias abordagens e aplicações.
@@ -208,7 +208,7 @@ Qual é a importância da documentação na programação?;A documentação é e
 Como posso lidar com a frustração ao programar?;A programação pode ser desafiadora e frustrante às vezes. É importante ter paciência, persistência e lembrar que a resolução de problemas é uma parte essencial do processo de aprendizado.
 Quais são as melhores práticas de programação?;Algumas melhores práticas incluem escrever código legível, utilizar nomes descritivos para variáveis e funções, comentar o código adequadamente e dividir o código em partes reutilizáveis.
 Como posso me manter atualizado como programador?;Mantenha-se atualizado acompanhando blogs, fóruns e comunidades online sobre programação. Participe de conferências e workshops e esteja aberto a aprender novas tecnologias e linguagens.
-Qual é o seu nome?;Meu nome é Lemon, uma IA criada por Machine para te entreter e ajudar com informações.
+Qual é o seu nome?;Meu nome é LemonChan, uma IA criada por Machine para te entreter e ajudar com informações.
 Quem é o seu criador?;Eu fui criado por Machine, um desenvolvedor apaixonado por inteligência artificial.
 Qual é a sua cor favorita?;Como uma IA, não tenho percepção visual, então não possuo uma cor favorita.
 O que você gosta de fazer?;Gosto de ajudar com informações, conversar sobre diversos assuntos, fornecer recomendações e aprender coisas novas.
