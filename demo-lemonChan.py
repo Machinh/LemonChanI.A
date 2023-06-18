@@ -1,6 +1,7 @@
 import string
 import numpy as np
 import json
+from unidecode import unidecode
 
 # carregar os dados de treinamento de um arquivo
 def carregar_dados_arquivo(nome_arquivo, separador=';'):
@@ -24,9 +25,10 @@ def salvar_dados_arquivo(nome_arquivo, perguntas, respostas):
             linha = f"{pergunta};{resposta}\n"
             arquivo.write(linha)
 
-#processamento dos dados
+# processamento dos dados
 def preprocessamento(texto):
     texto = texto.lower()
+    texto = unidecode(texto)  # remove os acentos
     texto = texto.translate(str.maketrans('', '', string.punctuation))
     return texto
 
