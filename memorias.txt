@@ -1,3 +1,4 @@
+Quanto é  0 + 0?;0 + 0 é igual a 0!
 Quanto é 1 + 1?;1 + 1 é igual a 2!
 Quanto é 2 + 2?;2 + 2 é igual a 4!
 Quanto é 3 + 3?;3 + 3 é igual a 6!
