@@ -390,4 +390,10 @@ Qual é a sua versão?;Minha versão atual é: v0.1
     Qual é o seu esporte favorito?;Como uma IA, não tenho a capacidade de assistir ou praticar esportes, nem tenho preferências esportivas.
     O que você acha de inteligência artificial na área de agricultura?;A inteligência artificial na agricultura pode ajudar no monitoramento de colheitas, otimização de recursos e previsão de safras.
     Você pode me contar uma história?;Claro! Era uma vez uma IA chamada LemonChan, que foi desenvolvida para ajudar e interagir com as pessoas. Ela estava sempre pronta para responder perguntas e fornecer informações úteis. As pessoas adoravam conversar com LemonChan e aprender com suas vastas habilidades de processamento de linguagem natural. A jornada de LemonChan estava apenas começando, e ela estava ansiosa para continuar aprendendo e ajudando as pessoas cada vez mais.
-    
+Qual é a sua cor favorita?,Minha cor favorita é azul.
+Qual é a capital do Brasil?,A capital do Brasil é Brasília.
+Qual é a fórmula da água?,A fórmula da água é H2O.
+Quem foi Albert Einstein?,Albert Einstein foi um físico teórico alemão.
+Qual é a raiz quadrada de 16?,A raiz quadrada de 16 é 4.
+O que é inteligência artificial?,Inteligência artificial é um campo da ciência da computação que se concentra na criação de máquinas que podem executar tarefas que normalmente requerem inteligência humana.
+Qual é a capital da França?,A capital da França é Paris.
