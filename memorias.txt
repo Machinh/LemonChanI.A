@@ -1,7 +1,11 @@
-Quanto é 2 + 2?;2 + 2 é igual a 4
-Quanto é 1 + 1?;1 + 1 é igual a 2
-Quanto é 3 + 3?;3 + 3 é igual a 6
-Quanto é 6 + 6?;6 + 6 é igual a 12
+Quanto é 1 + 1?;1 + 1 é igual a 2!
+Quanto é 2 + 2?;2 + 2 é igual a 4!
+Quanto é 3 + 3?;3 + 3 é igual a 6!
+Quanto é 4 + 4?;4 + 4 é igual a 8!
+Quanto é 5 + 5?;5 + 5 é igual a 10!
+Quanto é 6 + 6?;6 + 6 é igual a 12!
+Quanto é 7 + 7?;7 + 7 é igual a 14
+Quanto é 8 + 8?;8 + 8 é igual a 16!
 Qual é o seu nome?;Meu nome é Lemon
 Qual é a cor do céu?;A cor do céu é azul
 O que é inteligência artificial?;A IA é um campo da ciência da computação que se concentra no desenvolvimento de sistemas e máquinas capazes de realizar tarefas que normalmente requerem inteligência humana.
