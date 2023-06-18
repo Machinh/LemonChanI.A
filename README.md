@@ -9,4 +9,5 @@ Estou pronta para explorar um mundo de conhecimento e colaborar com você. Vamos
 
 # Como usar:
 git clone https://github.com/Machinh/LemonChanI.A
+
 python3 demo-lemonChan.py
