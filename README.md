@@ -8,6 +8,17 @@ Estou pronta para explorar um mundo de conhecimento e colaborar com você. Vamos
 ![](https://i.ibb.co/fNGL12g/OIG-ywl-removebg-preview.png)
 
 # Como usar:
-git clone https://github.com/Machinh/LemonChanI.A
+* antes tenha certeza de ter todas as minhas bibliotecas, Lista:
+* string
+* numpy
+* json
+* unidecode
 
+* em seguida:
+  
+```
+git clone https://github.com/Machinh/LemonChanI.A
+```
+```
 python3 demo-LemonChan.py
+```
