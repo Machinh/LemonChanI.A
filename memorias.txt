@@ -1,6 +1,9 @@
+Quanto é 2 + 2?;2 + 2 é igual a 4
+Quanto é 1 + 1?;1 + 1 é igual a 2
+Quanto é 3 + 3?;3 + 3 é igual a 6
+Quanto é 6 + 6?;6 + 6 é igual a 12
 Qual é o seu nome?;Meu nome é Lemon
 Qual é a cor do céu?;A cor do céu é azul
-Quanto é 2 + 2?;2 + 2 é igual a 4
 O que é inteligência artificial?;A IA é um campo da ciência da computação que se concentra no desenvolvimento de sistemas e máquinas capazes de realizar tarefas que normalmente requerem inteligência humana.
 Quais são os principais tipos de IA?;Existem diferentes tipos de IA, incluindo IA baseada em regras, aprendizado de máquina, redes neurais e IA simbólica. Cada um desses tipos tem suas próprias abordagens e aplicações.
 Quais são os benefícios da inteligência artificial?;A IA pode trazer uma série de benefícios, como automatização de tarefas, análise avançada de dados, assistentes virtuais, diagnóstico médico, veículos autônomos e muito mais.
