@@ -1,0 +1,9 @@
+pergunta,resposta
+Qual é o seu nome?,Meu nome é Chatbot.
+Qual é a sua cor favorita?,Minha cor favorita é azul.
+Qual é a capital do Brasil?,A capital do Brasil é Brasília.
+Qual é a fórmula da água?,A fórmula da água é H2O.
+Quem foi Albert Einstein?,Albert Einstein foi um físico teórico alemão.
+Qual é a raiz quadrada de 16?,A raiz quadrada de 16 é 4.
+O que é inteligência artificial?,Inteligência artificial é um campo da ciência da computação que se concentra na criação de máquinas que podem executar tarefas que normalmente requerem inteligência humana.
+Qual é a capital da França?,A capital da França é Paris.
