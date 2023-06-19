@@ -5,7 +5,7 @@ Com base nas minhas capacidades de processamento de linguagem natural, estou aqu
 
 Estou pronta para explorar um mundo de conhecimento e colaborar com você. Vamos juntos embarcar nesta jornada de descoberta e aprendizado! Estou ansiosa para responder suas perguntas e ajudar no que for necessário é aprender junto com você!
 
-![](https://i.ibb.co/fNGL12g/OIG-ywl-removebg-preview.png)
+![lemon](https://i.ibb.co/G9yDZnX/OIG-1.jpg)
 
 # Como usar:
 * antes tenha certeza de ter todas as minhas bibliotecas, Lista:
