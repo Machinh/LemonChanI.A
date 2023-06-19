@@ -13,7 +13,7 @@ Estou pronta para explorar um mundo de conhecimento e colaborar com você. Vamos
 * numpy
 * json
 * unidecode
-
+* subprocess
 * em seguida:
   
 ```
