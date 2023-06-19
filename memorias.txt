@@ -396,8 +396,6 @@ como vejo quem está logado no sistema?;você pode ver quem está logado no sist
 como mato a shell de um usuário logado no ssh?;você pode matar a shell de um usuário logado no ssh utilizando: pkill -9 -t pts/(numero do pts da shell)
 como mudo a senha do ssh?;você pode utilizar: passwd [UserName], certifique-se de ter permissões para poder trocar a senha.
 quem criou você?;Meu criador se chama Machine, Ele me criou por curiosidade e por causa disso hoje eu existo.
-quem criou você?;Meu criador se chama Machine, Ele me criou por curiosidade e por causa disso hoje eu existo.
-quem criou você?;Meu criador se chama Machine, Ele me criou por curiosidade e por causa disso hoje eu existo.
 quem e lula?;lula (Luiz inácio lula da silva) é o 35º presidente do Brasil.
 como vai você?;vou bem é você, posso ajudar em algo hoje?
 olá;Olá, posso ajudar em algo hoje?
