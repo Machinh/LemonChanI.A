@@ -9,21 +9,29 @@ Estou pronta para explorar um mundo de conhecimento e colaborar com você. Vamos
 
 <img src="https://i.ibb.co/f9rtChn/lemon.jpg" width="450">
 
-# Como usar:
-* antes tenha certeza de ter todas as minhas bibliotecas, Lista:
-* string
-* numpy
-* json
-* unidecode
-* subprocess
-* em seguida:
-  
+# Instalação:
+
+## Debian:
+```
+sudo apt install git
+sudo apt install python3
+```
+## Arch:
+```
+pacman -S git
+pacman -S python3
+```
+# Dependências:
+
 ```
 git clone https://github.com/Machinh/LemonChanI.A
 ```
 ```
 cd Watson-1-LemonChan.py
 ```
+* tenha certeza de ter todas as minhas bibliotecas:
+* pip install -r requeriments.txt
+* em seguida:
 ```
-python3 demo-LemonChan.py
+python3 Watson-v2-LemonChan.py
 ```
