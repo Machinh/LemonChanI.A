@@ -68,7 +68,8 @@ def q_learning(perguntas, respostas, perguntas_preproc, recompensas, taxa_aprend
 
 # Sair do loop
 comando_chave1 = {'sair', 'exit', 'quit'}
-
+#comandos
+comandos_disponiveis = ['help | Lista de comandos', 'ip | Mostra o IP atual', 'scan [endereço IP | Varredura de rede]', 'exit, sair | Fechar o prompt da IA']
 # Nome do usuário
 usuario = input('Qual é o seu nome? ')
 if usuario == '':
@@ -103,14 +104,25 @@ while True:
     if user_input.lower() in comando_chave1:
         break
 
-    if user_input.lower() == 'qual é o meu ip?':
+    if user_input.lower() == 'qual é o meu ip?' or user_input.lower() == 'mostre meu ip' or user_input.lower()== 'ip' or user_input.lower() == 'meu ip?':
         ip = obter_endereco_ip()
         print(f'Lemon: Seu endereço IP é: {ip}')
-    elif user_input.lower().startswith('use o nmap'):
-        ip = user_input.split('use o nmap para escanear ')[1]
-        resultado = subprocess.check_output(['nmap', ip])
-        resultado_str = resultado.decode('utf-8')
-        print(f'Lemon: Aqui está o resultado da varredura da rede:\n{resultado_str}')
+
+        #nmap scan
+    elif user_input.lower().startswith('scan'):
+        try:
+            ip = user_input.split('scan ')[1]
+            resultado = subprocess.check_output(['nmap', ip])
+            resultado_str = resultado.decode('utf-8')
+            print(f'Lemon: Aqui está o resultado da varredura da rede:\n{resultado_str}')
+        except IndexError:
+            print("Lemon: Você precisa fornecer um endereço IP antes do 'scan' para o comando Nmap. exemplo: scan [endereço IP]")
+
+    elif user_input.lower() == 'help' or user_input.lower() == 'Help':
+        print('Lemon: COMANDOS DISPONÌVEIS DA WATSON V-1:')
+        for i, comando in enumerate(comandos_disponiveis, 1):
+            print(f'{i}. {comando}')
+
     else:
         pergunta_similar_idx = encontrar_pergunta_similar(user_input, perguntas_preproc)
         if similaridade_cosseno(preprocessamento(user_input), preprocessamento(perguntas[pergunta_similar_idx])) < 0.2:
