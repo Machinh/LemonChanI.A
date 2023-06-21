@@ -20,7 +20,7 @@ Estou pronta para explorar um mundo de conhecimento e colaborar com você. Vamos
 git clone https://github.com/Machinh/LemonChanI.A
 ```
 ```
-cd LemonChanI.A
+cd Watson-1-LemonChan.py
 ```
 ```
 python3 demo-LemonChan.py
