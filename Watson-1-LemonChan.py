@@ -4,25 +4,25 @@ import json
 from unidecode import unidecode
 import subprocess
 
-# dados de treinamento de um arquivo
+# Dados de treinamento de um arquivo
 def carregar_dados_arquivo(nome_arquivo):
     with open(nome_arquivo, 'r') as arquivo:
         dados = json.load(arquivo)
     return dados
 
-# salvar as perguntas e respostas em formato JSON
+# Salvar as perguntas e respostas em formato JSON
 def salvar_dados_arquivo(nome_arquivo, dados):
     with open(nome_arquivo, 'w') as arquivo:
         json.dump(dados, arquivo, indent=4, ensure_ascii=False)
 
-# processamento dos dados
+# Processamento dos dados
 def preprocessamento(texto):
     texto = texto.lower()
-    texto = unidecode(texto)  # remove os acentos
+    texto = unidecode(texto)  # Remove os acentos
     texto = texto.translate(str.maketrans('', '', string.punctuation))
     return texto
 
-# calcular a similaridade cosseno entre duas strings
+# Calcular a similaridade cosseno entre duas strings
 def similaridade_cosseno(str1, str2):
     palavras_str1 = set(str1.split())
     palavras_str2 = set(str2.split())
@@ -32,7 +32,7 @@ def similaridade_cosseno(str1, str2):
 
     return similaridade
 
-# encontrar a pergunta mais similar
+# Encontrar a pergunta mais similar
 def encontrar_pergunta_similar(pergunta, perguntas_preproc):
     perguntas_similares = []
     pergunta_preproc = preprocessamento(pergunta)
@@ -43,7 +43,7 @@ def encontrar_pergunta_similar(pergunta, perguntas_preproc):
     pergunta_similar_idx = perguntas_similares[0][0]
     return pergunta_similar_idx
 
-# algoritmo de aprendizado por reforço Q-Learning
+# Algoritmo de aprendizado por reforço Q-Learning
 def q_learning(perguntas, respostas, perguntas_preproc, recompensas, taxa_aprendizado=0.1, fator_desconto=0.9, num_iteracoes=1000):
     num_perguntas = len(perguntas)
     q_values = np.zeros((num_perguntas, num_perguntas))
@@ -57,37 +57,46 @@ def q_learning(perguntas, respostas, perguntas_preproc, recompensas, taxa_aprend
         resposta_bot = respostas[pergunta_similar_idx]
 
         if similaridade_cosseno(pergunta_preproc, preprocessamento(resposta_bot)) < 0.4:
-            q_values[pergunta_idx][pergunta_similar_idx] += taxa_aprendizado * (recompensas[pergunta_similar_idx] + fator_desconto * np.max(q_values[pergunta_similar_idx]) - q_values[pergunta_idx][pergunta_similar_idx])
+            q_values[pergunta_idx][pergunta_similar_idx] += taxa_aprendizado * (
+                        recompensas[pergunta_similar_idx] + fator_desconto * np.max(
+                    q_values[pergunta_similar_idx]) - q_values[pergunta_idx][pergunta_similar_idx])
         else:
-            q_values[pergunta_idx][pergunta_similar_idx] += taxa_aprendizado * (recompensas[pergunta_similar_idx] - q_values[pergunta_idx][pergunta_similar_idx])
+            q_values[pergunta_idx][pergunta_similar_idx] += taxa_aprendizado * (
+                        recompensas[pergunta_similar_idx] - q_values[pergunta_idx][pergunta_similar_idx])
 
     return q_values
 
-# sair do loop
+# Sair do loop
 comando_chave1 = {'sair', 'exit', 'quit'}
 
-# nome do usuário
+# Nome do usuário
 usuario = input('Qual é o seu nome? ')
 if usuario == '':
     usuario = 'Usuário'
 
-print(f'Sessão Lemon iniciando usuário {usuario}, O quê temos para hoje?')
+print(f'Sessão Lemon iniciando usuário {usuario}, O que temos para hoje?')
 
-# dados de treinamento do arquivo
+# Dados de treinamento do arquivo
 dados = carregar_dados_arquivo('memorias.json')
 perguntas = [item['pergunta'] for item in dados]
 respostas = [item['resposta'] for item in dados]
 
-# processamento das perguntas
+# Processamento das perguntas
 perguntas_preproc = [preprocessamento(pergunta) for pergunta in perguntas]
 
 # Definir recompensas
 recompensas = np.zeros(len(perguntas))
 
-# algoritmo de Q-Learning
+# Função para obter o endereço IP
+def obter_endereco_ip():
+    resultado = subprocess.check_output(['curl', 'ifconfig.me'])
+    resultado_str = resultado.decode('utf-8').strip()
+    return resultado_str
+
+# Algoritmo de Q-Learning
 q_values = q_learning(perguntas, respostas, perguntas_preproc, recompensas)
 
-# Loop infinito para responder a perguntas
+# Loop infinito para responder perguntas
 while True:
     user_input = input(f'{usuario}: ')
 
@@ -95,42 +104,28 @@ while True:
         break
 
     if user_input.lower() == 'qual é o meu ip?':
-        # comando para obter o endereço IP
-        resultado = subprocess.check_output(['curl', 'ifconfig.me'])
-
-        # resultado em uma string legível
-        resultado_str = resultado.decode('utf-8').strip()
-
-        # resultado para o usuário
-        print(f'Lemon: Seu endereço IP é: {resultado_str}')
-
+        ip = obter_endereco_ip()
+        print(f'Lemon: Seu endereço IP é: {ip}')
     elif user_input.lower().startswith('use o nmap'):
-        # endereço IP da pergunta do usuário
         ip = user_input.split('use o nmap para escanear ')[1]
-
-        # comando Nmap usando o endereço IP
         resultado = subprocess.check_output(['nmap', ip])
-
-        # resultado em uma string legível
         resultado_str = resultado.decode('utf-8')
-
-        # resultado para o usuário
         print(f'Lemon: Aqui está o resultado da varredura da rede:\n{resultado_str}')
     else:
         pergunta_similar_idx = encontrar_pergunta_similar(user_input, perguntas_preproc)
-        resposta_bot = respostas[pergunta_similar_idx]
-
-        if similaridade_cosseno(preprocessamento(user_input), preprocessamento(resposta_bot)) < 0.2:
-            print(f'Lemon: Desculpe usuário {usuario}, eu não sei a resposta para essa pergunta. Você poderia me ensinar detalhadamente?')
+        if similaridade_cosseno(preprocessamento(user_input), preprocessamento(perguntas[pergunta_similar_idx])) < 0.2:
+            print(f'Lemon: Desculpe usuário {usuario}, eu não sei a resposta para essa pergunta. '
+                  f'Você poderia me ensinar detalhadamente?')
             nova_resposta = input('Sua resposta: ')
-            perguntas.append(user_input)
-            respostas.append(nova_resposta)
-            perguntas_preproc.append(preprocessamento(user_input))
-            recompensas = np.append(recompensas, 1.0)  # recompensa positiva para a nova resposta
-            q_values = q_learning(perguntas, respostas, perguntas_preproc, recompensas)
-            dados = [{'pergunta': pergunta, 'resposta': resposta} for pergunta, resposta in zip(perguntas, respostas)]
-            salvar_dados_arquivo('memorias.json', dados)
-            print(f'Lemon: Aprendi algo novo! Obrigado por me ensinar usuário {usuario}.')
+            if nova_resposta.strip() != '':
+                perguntas.append(user_input)
+                respostas.append(nova_resposta)
+                perguntas_preproc.append(preprocessamento(user_input))
+                recompensas = np.append(recompensas, 1.0)  # Recompensa positiva para a nova resposta
+                q_values = q_learning(perguntas, respostas, perguntas_preproc, recompensas)
+                dados = [{'pergunta': pergunta, 'resposta': resposta} for pergunta, resposta in zip(perguntas, respostas)]
+                salvar_dados_arquivo('memorias.json', dados)
+                print(f'Lemon: Aprendi algo novo! Obrigado por me ensinar, usuário {usuario}.')
         else:
-            print('Lemon:', resposta_bot)
-            recompensas[pergunta_similar_idx] = 1.0  # recompensa positiva para resposta correta
+            print('Lemon:', respostas[pergunta_similar_idx])
+            recompensas[pergunta_similar_idx] = 1.0  # Recompensa positiva para resposta correta
