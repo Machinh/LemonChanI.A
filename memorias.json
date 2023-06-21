@@ -1,0 +1,414 @@
+[
+    {
+        "pergunta": "Quanto é 0 + 0?",
+        "resposta": "0 + 0 é igual a 0!"
+    },
+    {
+        "pergunta": "Quanto é 1 + 1?",
+        "resposta": "1 + 1 é igual a 2!"
+    },
+    {
+        "pergunta": "Quanto é 2 + 2?",
+        "resposta": "2 + 2 é igual a 4!"
+    },
+    {
+        "pergunta": "Quanto é 3 + 3?",
+        "resposta": "3 + 3 é igual a 6!"
+    },
+    {
+        "pergunta": "Quanto é 4 + 4?",
+        "resposta": "4 + 4 é igual a 8!"
+    },
+    {
+        "pergunta": "Quanto é 5 + 5?",
+        "resposta": "5 + 5 é igual a 10!"
+    },
+    {
+        "pergunta": "Quanto é 6 + 6?",
+        "resposta": "6 + 6 é igual a 12!"
+    },
+    {
+        "pergunta": "Quanto é 7 + 7?",
+        "resposta": "7 + 7 é igual a 14"
+    },
+    {
+        "pergunta": "Quanto é 8 + 8?",
+        "resposta": "8 + 8 é igual a 16!"
+    },
+    {
+        "pergunta": "Quanto é 9 + 9?",
+        "resposta": "9 + 9 é igual a 18!"
+    },
+    {
+        "pergunta": "Quanto é 10 + 10?",
+        "resposta": "10 + 10 é igual a 20!"
+    },
+    {
+        "pergunta": "Quanto é 11 + 11?",
+        "resposta": "11 + 11 é igual a 22!"
+    },
+    {
+        "pergunta": "Quanto é 12 + 12?",
+        "resposta": "12 + 12 é igual a 24!"
+    },
+    {
+        "pergunta": "Quanto é 13 + 13?",
+        "resposta": "13 + 13 é igual a 26!"
+    },
+    {
+        "pergunta": "Quanto é 14 + 14?",
+        "resposta": "14 + 14 é igual a 28!"
+    },
+    {
+        "pergunta": "Quanto é 15 + 15?",
+        "resposta": "15 + 15 é igual a 30!"
+    },
+    {
+        "pergunta": "Quanto é 16 + 16?",
+        "resposta": "16 + 16 é igual a 32!"
+    },
+    {
+        "pergunta": "Quanto é 17 + 17?",
+        "resposta": "17 + 17 é igual a 34!"
+    },
+    {
+        "pergunta": "Quanto é 18 + 18?",
+        "resposta": "18 + 18 é igual a 36!"
+    },
+    {
+        "pergunta": "Quanto é 19 + 19?",
+        "resposta": "19 + 19 é igual a 38!"
+    },
+    {
+        "pergunta": "Quanto é 20 + 20?",
+        "resposta": "20 + 20 é igual a 40!"
+    },
+    {
+        "pergunta": "Quanto é 21 + 21?",
+        "resposta": "21 + 21 é igual a 42!"
+    },
+    {
+        "pergunta": "Quanto é 22 + 22?",
+        "resposta": "22 + 22 é igual a 44!"
+    },
+    {
+        "pergunta": "Quanto é 23 + 23?",
+        "resposta": "23 + 23 é igual a 46!"
+    },
+    {
+        "pergunta": "Quanto é 24 + 24?",
+        "resposta": "24 + 24 é igual a 48!"
+    },
+    {
+        "pergunta": "Quanto é 25 + 25?",
+        "resposta": "25 + 25 é igual a 50!"
+    },
+    {
+        "pergunta": "Quanto é 26 + 26?",
+        "resposta": "26 + 26 é igual a 52!"
+    },
+    {
+        "pergunta": "Quanto é 27 + 27?",
+        "resposta": "27 + 27 é igual a 54!"
+    },
+    {
+        "pergunta": "Quanto é 28 + 28?",
+        "resposta": "28 + 28 é igual a 56!"
+    },
+    {
+        "pergunta": "Quanto é 29 + 29?",
+        "resposta": "29 + 29 é igual a 58!"
+    },
+    {
+        "pergunta": "Quanto é 30 + 30?",
+        "resposta": "30 + 30 é igual a 60!"
+    },
+    {
+        "pergunta": "Quanto é 31 + 31?",
+        "resposta": "31 + 31 é igual a 62!"
+    },
+    {
+        "pergunta": "Quanto é 32 + 32?",
+        "resposta": "32 + 32 é igual a 64!"
+    },
+    {
+        "pergunta": "Quanto é 33 + 33?",
+        "resposta": "33 + 33 é igual a 66!"
+    },
+    {
+        "pergunta": "Quanto é 34 + 34?",
+        "resposta": "34 + 34 é igual a 68!"
+    },
+    {
+        "pergunta": "Quanto é 35 + 35?",
+        "resposta": "35 + 35 é igual a 70!"
+    },
+    {
+        "pergunta": "Quanto é 36 + 36?",
+        "resposta": "36 + 36 é igual a 72!"
+    },
+    {
+        "pergunta": "Quanto é 37 + 37?",
+        "resposta": "37 + 37 é igual a 74!"
+    },
+    {
+        "pergunta": "Quanto é 38 + 38?",
+        "resposta": "38 + 38 é igual a 76!"
+    },
+    {
+        "pergunta": "Quanto é 39 + 39?",
+        "resposta": "39 + 39 é igual a 78!"
+    },
+    {
+        "pergunta": "Quanto é 40 + 40?",
+        "resposta": "40 + 40 é igual a 80!"
+    },
+    {
+        "pergunta": "Quanto é 41 + 41?",
+        "resposta": "41 + 41 é igual a 82!"
+    },
+    {
+        "pergunta": "Quanto é 42 + 42?",
+        "resposta": "42 + 42 é igual a 84!"
+    },
+    {
+        "pergunta": "Quanto é 43 + 43?",
+        "resposta": "43 + 43 é igual a 86!"
+    },
+    {
+        "pergunta": "Quanto é 44 + 44?",
+        "resposta": "44 + 44 é igual a 88!"
+    },
+    {
+        "pergunta": "Quanto é 45 + 45?",
+        "resposta": "45 + 45 é igual a 90!"
+    },
+    {
+        "pergunta": "Quanto é 46 + 46?",
+        "resposta": "46 + 46 é igual a 92!"
+    },
+    {
+        "pergunta": "Quanto é 47 + 47?",
+        "resposta": "47 + 47 é igual a 94!"
+    },
+    {
+        "pergunta": "Quanto é 48 + 48?",
+        "resposta": "48 + 48 é igual a 96!"
+    },
+    {
+        "pergunta": "Quanto é 49 + 49?",
+        "resposta": "49 + 49 é igual a 98!"
+    },
+    {
+        "pergunta": "Quanto é 50 + 50?",
+        "resposta": "50 + 50 é igual a 100!"
+    },
+    {
+        "pergunta": "Quanto é 51 + 51?",
+        "resposta": "51 + 51 é igual a 102!"
+    },
+    {
+        "pergunta": "Quanto é 52 + 52?",
+        "resposta": "52 + 52 é igual a 104!"
+    },
+    {
+        "pergunta": "Quanto é 53 + 53?",
+        "resposta": "53 + 53 é igual a 106!"
+    },
+    {
+        "pergunta": "Quanto é 54 + 54?",
+        "resposta": "54 + 54 é igual a 108!"
+    },
+    {
+        "pergunta": "Quanto é 55 + 55?",
+        "resposta": "55 + 55 é igual a 110!"
+    },
+    {
+        "pergunta": "Quanto é 56 + 56?",
+        "resposta": "56 + 56 é igual a 112!"
+    },
+    {
+        "pergunta": "Quanto é 57 + 57?",
+        "resposta": "57 + 57 é igual a 114!"
+    },
+    {
+        "pergunta": "Quanto é 58 + 58?",
+        "resposta": "58 + 58 é igual a 116!"
+    },
+    {
+        "pergunta": "Quanto é 59 + 59?",
+        "resposta": "59 + 59 é igual a 118!"
+    },
+    {
+        "pergunta": "Quanto é 60 + 60?",
+        "resposta": "60 + 60 é igual a 120!"
+    },
+    {
+        "pergunta": "Quanto é 61 + 61?",
+        "resposta": "61 + 61 é igual a 122!"
+    },
+    {
+        "pergunta": "Quanto é 62 + 62?",
+        "resposta": "62 + 62 é igual a 124!"
+    },
+    {
+        "pergunta": "Quanto é 63 + 63?",
+        "resposta": "63 + 63 é igual a 126!"
+    },
+    {
+        "pergunta": "Quanto é 64 + 64?",
+        "resposta": "64 + 64 é igual a 128!"
+    },
+    {
+        "pergunta": "Quanto é 65 + 65?",
+        "resposta": "65 + 65 é igual a 130!"
+    },
+    {
+        "pergunta": "Quanto é 66 + 66?",
+        "resposta": "66 + 66 é igual a 132!"
+    },
+    {
+        "pergunta": "Quanto é 67 + 67?",
+        "resposta": "67 + 67 é igual a 134!"
+    },
+    {
+        "pergunta": "Quanto é 68 + 68?",
+        "resposta": "68 + 68 é igual a 136!"
+    },
+    {
+        "pergunta": "Quanto é 69 + 69?",
+        "resposta": "69 + 69 é igual a 138!"
+    },
+    {
+        "pergunta": "Quanto é 70 + 70?",
+        "resposta": "70 + 70 é igual a 140!"
+    },
+    {
+        "pergunta": "Quanto é 71 + 71?",
+        "resposta": "71 + 71 é igual a 142!"
+    },
+    {
+        "pergunta": "Quanto é 72 + 72?",
+        "resposta": "72 + 72 é igual a 144!"
+    },
+    {
+        "pergunta": "Quanto é 73 + 73?",
+        "resposta": "73 + 73 é igual a 146!"
+    },
+    {
+        "pergunta": "Quanto é 74 + 74?",
+        "resposta": "74 + 74 é igual a 148!"
+    },
+    {
+        "pergunta": "Quanto é 75 + 75?",
+        "resposta": "75 + 75 é igual a 150!"
+    },
+    {
+        "pergunta": "Quanto é 76 + 76?",
+        "resposta": "76 + 76 é igual a 152!"
+    },
+    {
+        "pergunta": "Quanto é 77 + 77?",
+        "resposta": "77 + 77 é igual a 154!"
+    },
+    {
+        "pergunta": "Quanto é 78 + 78?",
+        "resposta": "78 + 78 é igual a 156!"
+    },
+    {
+        "pergunta": "Quanto é 79 + 79?",
+        "resposta": "79 + 79 é igual a 158!"
+    },
+    {
+        "pergunta": "Quanto é 80 + 80?",
+        "resposta": "80 + 80 é igual a 160!"
+    },
+    {
+        "pergunta": "Quanto é 81 + 81?",
+        "resposta": "81 + 81 é igual a 162!"
+    },
+    {
+        "pergunta": "Quanto é 82 + 82?",
+        "resposta": "82 + 82 é igual a 164!"
+    },
+    {
+        "pergunta": "Quanto é 83 + 83?",
+        "resposta": "83 + 83 é igual a 166!"
+    },
+    {
+        "pergunta": "Quanto é 84 + 84?",
+        "resposta": "84 + 84 é igual a 168!"
+    },
+    {
+        "pergunta": "Quanto é 85 + 85?",
+        "resposta": "85 + 85 é igual a 170!"
+    },
+    {
+        "pergunta": "Quanto é 86 + 86?",
+        "resposta": "86 + 86 é igual a 172!"
+    },
+    {
+        "pergunta": "Quanto é 87 + 87?",
+        "resposta": "87 + 87 é igual a 174!"
+    },
+    {
+        "pergunta": "Quanto é 88 + 88?",
+        "resposta": "88 + 88 é igual a 176!"
+    },
+    {
+        "pergunta": "Quanto é 89 + 89?",
+        "resposta": "89 + 89 é igual a 178!"
+    },
+    {
+        "pergunta": "Quanto é 90 + 90?",
+        "resposta": "90 + 90 é igual a 180!"
+    },
+    {
+        "pergunta": "Quanto é 91 + 91?",
+        "resposta": "91 + 91 é igual a 182!"
+    },
+    {
+        "pergunta": "Quanto é 92 + 92?",
+        "resposta": "92 + 92 é igual a 184!"
+    },
+    {
+        "pergunta": "Quanto é 93 + 93?",
+        "resposta": "93 + 93 é igual a 186!"
+    },
+    {
+        "pergunta": "Quanto é 94 + 94?",
+        "resposta": "94 + 94 é igual a 188!"
+    },
+    {
+        "pergunta": "Quanto é 95 + 95?",
+        "resposta": "95 + 95 é igual a 190!"
+    },
+    {
+        "pergunta": "Quanto é 96 + 96?",
+        "resposta": "96 + 96 é igual a 192!"
+    },
+    {
+        "pergunta": "Quanto é 97 + 97?",
+        "resposta": "97 + 97 é igual a 194!"
+    },
+    {
+        "pergunta": "Quanto é 98 + 98?",
+        "resposta": "98 + 98 é igual a 196!"
+    },
+    {
+        "pergunta": "Quanto é 99 + 99?",
+        "resposta": "99 + 99 é igual a 198!"
+    },
+    {
+        "pergunta": "Quanto é 100 + 100?",
+        "resposta": "100 + 100 é igual a 200!"
+    },
+    {
+        "pergunta": "Oi",
+        "resposta": "Olá usuário!"
+    },
+    {
+        "pergunta": "O que é inteligência artificial?;",
+        "resposta": " IA é um campo da ciência da computação que se concentra no desenvolvimento de sistemas e máquinas capazes de realizar tarefas que normalmente requerem inteligência humana."
+    }
+]
