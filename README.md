@@ -27,7 +27,7 @@ pacman -S python3
 git clone https://github.com/Machinh/LemonChanI.A
 ```
 ```
-cd Watson-1-LemonChan.py
+cd Watson-v2-LemonChan.py
 ```
 * tenha certeza de ter todas as minhas bibliotecas:
 * pip install -r requeriments.txt
