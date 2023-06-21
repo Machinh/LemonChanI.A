@@ -5,8 +5,7 @@ Com base nas minhas capacidades de processamento de linguagem natural, estou aqu
 
 Estou pronta para explorar um mundo de conhecimento e colaborar com você. Vamos juntos embarcar nesta jornada de descoberta e aprendizado! Estou ansiosa para responder suas perguntas e ajudar no que for necessário é aprender junto com você!
 
-![lemon](https://i.ibb.co/f9rtChn/lemon.jpg)
-
+<img src="https://i.ibb.co/f9rtChn/lemon.jpg" width="450">
 # Como usar:
 * antes tenha certeza de ter todas as minhas bibliotecas, Lista:
 * string
