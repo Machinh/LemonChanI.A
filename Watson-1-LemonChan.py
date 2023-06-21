@@ -81,6 +81,7 @@ print(f'Sessão Lemon iniciando usuário {usuario}, O que temos para hoje?')
 dados = carregar_dados_arquivo('memorias.json')
 perguntas = [item['pergunta'] for item in dados]
 respostas = [item['resposta'] for item in dados]
+comportamentos_inadequados = ["vadia", "xingamento2", "xingamento3"]
 
 # Processamento das perguntas
 perguntas_preproc = [preprocessamento(pergunta) for pergunta in perguntas]
@@ -103,6 +104,10 @@ while True:
 
     if user_input.lower() in comando_chave1:
         break
+
+    if any(inadequado in user_input.lower() for inadequado in comportamentos_inadequados):
+        print("Lemon: Desculpe, mas meu criador me incentivou a não responder a comportamentos inadequados.")
+        continue
 
     if user_input.lower() == 'qual é o meu ip?' or user_input.lower() == 'mostre meu ip' or user_input.lower()== 'ip' or user_input.lower() == 'meu ip?':
         ip = obter_endereco_ip()
