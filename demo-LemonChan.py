@@ -5,26 +5,15 @@ from unidecode import unidecode
 import subprocess
 
 # dados de treinamento de um arquivo
-def carregar_dados_arquivo(nome_arquivo, separador=';'):
-    perguntas = []
-    respostas = []
+def carregar_dados_arquivo(nome_arquivo):
     with open(nome_arquivo, 'r') as arquivo:
-        for linha in arquivo:
-            linha = linha.strip()
-            if linha:
-                dados = linha.split(separador)
-                pergunta = dados[0].strip()
-                resposta = dados[1].strip()
-                perguntas.append(pergunta)
-                respostas.append(resposta)
-    return perguntas, respostas
+        dados = json.load(arquivo)
+    return dados
 
 # salvar as perguntas e respostas em formato JSON
-def salvar_dados_arquivo(nome_arquivo, perguntas, respostas):
+def salvar_dados_arquivo(nome_arquivo, dados):
     with open(nome_arquivo, 'w') as arquivo:
-        for pergunta, resposta in zip(perguntas, respostas):
-            linha = f"{pergunta};{resposta}\n"
-            arquivo.write(linha)
+        json.dump(dados, arquivo, indent=4, ensure_ascii=False)
 
 # processamento dos dados
 def preprocessamento(texto):
@@ -85,7 +74,9 @@ if usuario == '':
 print(f'Sessão Lemon iniciando usuário {usuario}, O quê temos para hoje?')
 
 # dados de treinamento do arquivo
-perguntas, respostas = carregar_dados_arquivo('memorias.txt')
+dados = carregar_dados_arquivo('memorias.json')
+perguntas = [item['pergunta'] for item in dados]
+respostas = [item['resposta'] for item in dados]
 
 # processamento das perguntas
 perguntas_preproc = [preprocessamento(pergunta) for pergunta in perguntas]
@@ -137,7 +128,8 @@ while True:
             perguntas_preproc.append(preprocessamento(user_input))
             recompensas = np.append(recompensas, 1.0)  # recompensa positiva para a nova resposta
             q_values = q_learning(perguntas, respostas, perguntas_preproc, recompensas)
-            salvar_dados_arquivo('memorias.txt', perguntas, respostas)
+            dados = [{'pergunta': pergunta, 'resposta': resposta} for pergunta, resposta in zip(perguntas, respostas)]
+            salvar_dados_arquivo('memorias.json', dados)
             print(f'Lemon: Aprendi algo novo! Obrigado por me ensinar usuário {usuario}.')
         else:
             print('Lemon:', resposta_bot)
