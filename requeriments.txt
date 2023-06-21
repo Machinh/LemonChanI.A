@@ -1,0 +1,5 @@
+string
+numpy
+json
+unicode
+subprocess
