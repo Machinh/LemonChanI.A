@@ -7,7 +7,7 @@ Estou pronta para explorar um mundo de conhecimento e colaborar com você. Vamos
 
 * Use ```help``` para listar os comandos
 
-<img src="https://i.ibb.co/f9rtChn/lemon.jpg" width="450">
+<img src="https://www.text-image.com/convert/temp/1687472850-201.140.238.41.png">
 
 # Instalação:
 
