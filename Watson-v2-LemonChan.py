@@ -4,11 +4,30 @@ import json
 from unidecode import unidecode
 import subprocess
 
-# Dados de treinamento de um arquivo
+try:
+    import string
+    import numpy as np
+    import json
+    from unidecode import unidecode
+    import subprocess
+    bibliotecas_carregadas = True
+    print("[+] Bibliotecas Lemon carregadas com sucesso!")
+except ImportError:
+    bibliotecas_carregadas = False
+    print("[-] ao carregar uma ou mais bibliotecas.")
+
 def carregar_dados_arquivo(nome_arquivo):
     with open(nome_arquivo, 'r') as arquivo:
         dados = json.load(arquivo)
     return dados
+
+try:
+    dados = carregar_dados_arquivo('memorias.json')
+    dados_carregados = True
+    print("[+] Dados de treinamento carregados com sucesso!")
+except FileNotFoundError:
+    dados_carregados = False
+    print("[-] Falha ao carregar os dados de treinamento.")
 
 # Salvar as perguntas e respostas em formato JSON
 def salvar_dados_arquivo(nome_arquivo, dados):
@@ -58,18 +77,18 @@ def q_learning(perguntas, respostas, perguntas_preproc, recompensas, taxa_aprend
 
         if similaridade_cosseno(pergunta_preproc, preprocessamento(resposta_bot)) < 0.4:
             q_values[pergunta_idx][pergunta_similar_idx] += taxa_aprendizado * (
-                        recompensas[pergunta_similar_idx] + fator_desconto * np.max(
+                recompensas[pergunta_similar_idx] + fator_desconto * np.max(
                     q_values[pergunta_similar_idx]) - q_values[pergunta_idx][pergunta_similar_idx])
         else:
             q_values[pergunta_idx][pergunta_similar_idx] += taxa_aprendizado * (
-                        recompensas[pergunta_similar_idx] - q_values[pergunta_idx][pergunta_similar_idx])
+                recompensas[pergunta_similar_idx] - q_values[pergunta_idx][pergunta_similar_idx])
 
     return q_values
 
 # Sair do loop
 comando_chave1 = {'sair', 'exit', 'quit'}
 #comandos
-comandos_disponiveis = ['help | Lista de comandos', 'ip | Mostra o IP atual', 'scan [endereço IP | Varredura de rede]', 'exit, sair | Fechar o prompt da IA']
+comandos_disponiveis = ['help | Lista de comandos', 'ip | Mostra o IP atual', 'scan [endereço IP] | Varredura de rede', 'exit, sair | Fechar o prompt da IA']
 # Nome do usuário
 usuario = input('Qual é o seu nome? ')
 if usuario == '':
@@ -77,11 +96,9 @@ if usuario == '':
 
 print(f'Sessão Lemon iniciando usuário {usuario}, O que temos para hoje?')
 
-# Dados de treinamento do arquivo
-dados = carregar_dados_arquivo('memorias.json')
 perguntas = [item['pergunta'] for item in dados]
 respostas = [item['resposta'] for item in dados]
-comportamentos_inadequados = ["vadia", "xingamento2", "xingamento3"]
+comportamentos_inadequados = ["vadia", "burra", "inútil"]
 
 # Processamento das perguntas
 perguntas_preproc = [preprocessamento(pergunta) for pergunta in perguntas]
@@ -113,7 +130,6 @@ while True:
         ip = obter_endereco_ip()
         print(f'Lemon: Seu endereço IP é: {ip}')
 
-        #nmap scan
     elif user_input.lower().startswith('scan'):
         try:
             ip = user_input.split('scan ')[1]
@@ -123,8 +139,8 @@ while True:
         except IndexError:
             print("Lemon: Você precisa fornecer um endereço IP antes do 'scan' para o comando Nmap. exemplo: scan [endereço IP]")
 
-    elif user_input.lower() == 'help' or user_input.lower() == 'Help':
-        print('Lemon: COMANDOS DISPONÌVEIS DA WATSON V-1:')
+    elif user_input.lower() == 'help':
+        print('Lemon: COMANDOS DISPONÍVEIS DA WATSON V-2:')
         for i, comando in enumerate(comandos_disponiveis, 1):
             print(f'{i}. {comando}')
 
