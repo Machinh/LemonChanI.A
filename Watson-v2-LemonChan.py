@@ -47,9 +47,13 @@ def similaridade_cosseno(str1, str2):
     palavras_str2 = set(str2.split())
 
     intersecao = palavras_str1.intersection(palavras_str2)
+    if len(intersecao) == 0:
+        return 0.0
+
     similaridade = len(intersecao) / (np.sqrt(len(palavras_str1)) * np.sqrt(len(palavras_str2)))
 
     return similaridade
+
 
 # Encontrar a pergunta mais similar
 def encontrar_pergunta_similar(pergunta, perguntas_preproc):
@@ -146,7 +150,7 @@ while True:
 
     else:
         pergunta_similar_idx = encontrar_pergunta_similar(user_input, perguntas_preproc)
-        if similaridade_cosseno(preprocessamento(user_input), preprocessamento(perguntas[pergunta_similar_idx])) < 0.2:
+        if similaridade_cosseno(preprocessamento(user_input), preprocessamento(perguntas[pergunta_similar_idx])) < 0.4:
             print(f'Lemon: Desculpe usuário {usuario}, eu não sei a resposta para essa pergunta. '
                   f'Você poderia me ensinar detalhadamente?')
             nova_resposta = input('Sua resposta: ')
