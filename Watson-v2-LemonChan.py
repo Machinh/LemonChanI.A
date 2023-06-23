@@ -3,6 +3,7 @@ import numpy as np
 import json
 from unidecode import unidecode
 import subprocess
+import os
 
 try:
     import string
@@ -89,6 +90,33 @@ def q_learning(perguntas, respostas, perguntas_preproc, recompensas, taxa_aprend
 
     return q_values
 
+# Carregar os valores Q a partir de um arquivo
+def carregar_q_values_arquivo(nome_arquivo):
+    q_values = np.loadtxt(nome_arquivo)
+    return q_values
+
+
+
+
+# Salvar os valores Q em um arquivo
+def salvar_q_values_arquivo(nome_arquivo, q_values):
+    np.save(nome_arquivo, q_values)
+
+# Carregar os valores Q a partir de um arquivo, se existir
+arquivo_q_values = 'q_values.npy'
+if os.path.exists(arquivo_q_values):
+    q_values = carregar_q_values_arquivo(arquivo_q_values)
+    print("[+] Valores Q carregados com sucesso!")
+else:
+    print("[-] Nenhum arquivo de Valores Q encontrado. Iniciando do zero...")
+
+# Salvar os valores Q em um arquivo
+salvar_q_values_arquivo(arquivo_q_values, q_values)
+print("[+] Valores Q salvos com sucesso!")
+
+
+
+
 # Sair do loop
 comando_chave1 = {'sair', 'exit', 'quit'}
 #comandos
@@ -165,4 +193,4 @@ while True:
                 print(f'Lemon: Aprendi algo novo! Obrigado por me ensinar, usuário {usuario}.')
         else:
             print('Lemon:', respostas[pergunta_similar_idx])
-            recompensas[pergunta_similar_idx] = 1.0  # Recompensa positiva para resposta correta
+            recompensas[pergunta_similar_idx] = 1.0  # Recompensa positiva para resposta correta]
