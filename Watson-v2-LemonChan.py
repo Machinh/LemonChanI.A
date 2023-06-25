@@ -80,7 +80,7 @@ def q_learning(perguntas, respostas, perguntas_preproc, recompensas, taxa_aprend
         pergunta_similar_idx = encontrar_pergunta_similar(pergunta, perguntas_preproc)
         resposta_bot = respostas[pergunta_similar_idx]
 
-        if similaridade_cosseno(pergunta_preproc, preprocessamento(resposta_bot)) < 0.4:
+        if similaridade_cosseno(pergunta_preproc, preprocessamento(resposta_bot)) < 0.5:
             q_values[pergunta_idx][pergunta_similar_idx] += taxa_aprendizado * (
                 recompensas[pergunta_similar_idx] + fator_desconto * np.max(
                     q_values[pergunta_similar_idx]) - q_values[pergunta_idx][pergunta_similar_idx])
@@ -178,7 +178,7 @@ while True:
 
     else:
         pergunta_similar_idx = encontrar_pergunta_similar(user_input, perguntas_preproc)
-        if similaridade_cosseno(preprocessamento(user_input), preprocessamento(perguntas[pergunta_similar_idx])) < 0.4:
+        if similaridade_cosseno(preprocessamento(user_input), preprocessamento(perguntas[pergunta_similar_idx])) < 0.5:
             print(f'Lemon: Desculpe usuário {usuario}, eu não sei a resposta para essa pergunta. '
                   f'Você poderia me ensinar detalhadamente?')
             nova_resposta = input('Sua resposta: ')
