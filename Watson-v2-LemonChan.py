@@ -92,7 +92,7 @@ def q_learning(perguntas, respostas, perguntas_preproc, recompensas, taxa_aprend
 
 # Carregar os valores Q a partir de um arquivo
 def carregar_q_values_arquivo(nome_arquivo):
-    q_values = np.loadtxt(nome_arquivo)
+    q_values = np.load(nome_arquivo)
     return q_values
 
 
