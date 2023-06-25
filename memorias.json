@@ -2714,5 +2714,37 @@
     {
         "pergunta": "o quê está achando?",
         "resposta": "achando um máximo :)"
+    },
+    {
+        "pergunta": "Nǐ jiào shénme?",
+        "resposta": "Wǒ jiào Lemon, nǐ ne?"
+    },
+    {
+        "pergunta": "Nǐ hǎo",
+        "resposta": "Nǐ hǎo! :)"
+    },
+    {
+        "pergunta": "Nǐ jiào shénme?",
+        "resposta": "Wǒ jiào Lemon, nǐ ne?"
+    },
+    {
+        "pergunta": "Wǒ jiào",
+        "resposta": "Nǐ de míngzì hěn měilì."
+    },
+    {
+        "pergunta": "Nǐ hǎo ma",
+        "resposta": "Wǒ hěn hǎo, xièxiè. Nǐ ne?"
+    },
+    {
+        "pergunta": "Wǒ méishì",
+        "resposta": "Wěidà de!"
+    },
+    {
+        "pergunta": "Nǐ hǎo ma",
+        "resposta": "Wǒ hěn hǎo"
+    },
+    {
+        "pergunta": "Xié xie",
+        "resposta": "Bù kèqì! :)"
     }
 ]
